@@ -5,6 +5,7 @@
 #include "gnome_sort.h"
 #include "quick_sort.h"
 #include "shell_sort.h"
+#include "merge_sort.h"
 
 void printArray(int* arr, int size);
 
@@ -19,7 +20,8 @@ int main() {
 	//insertion_sort(arr, 5);
 	//gnome_sort(arr, 6);
 	//quick_sort(arr, 0, 6-1);
-	shell_sort(arr, 6);
+	//shell_sort(arr, 6);
+	merge_sort(arr, 0, 6-1);
 
 	printf("Sorted arr: ");
 	printArray(arr, 6);

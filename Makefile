@@ -1,8 +1,8 @@
 CC = gcc
 
-all: sort.c bubble selection insertion swap gnome quick shell
+all: sort.c bubble selection insertion swap gnome quick shell merge
 	$(CC) -c sort.c
-	$(CC) -o sort sort.o bubble_sort.o swap.o selection_sort.o insertion_sort.o gnome_sort.o quick_sort.o shell_sort.o
+	$(CC) -o sort sort.o bubble_sort.o swap.o selection_sort.o insertion_sort.o gnome_sort.o quick_sort.o shell_sort.o merge_sort.o
 
 bubble: bubble_sort.c bubble_sort.h
 	$(CC) -c bubble_sort.c
@@ -22,8 +22,11 @@ quick: quick_sort.c quick_sort.h
 shell: shell_sort.c shell_sort.h
 	$(CC) -c shell_sort.c
 
+merge: merge_sort.c merge_sort.h
+	$(CC) -c merge_sort.c
+
 swap: swap.c swap.h
 	$(CC) -c swap.c
 
 clean: 
-	rm sort.o bubble_sort.o swap.o selection_sort.o insertion_sort.o gnome_sort.o quick_sort.o shell_sort.o
+	rm sort.o bubble_sort.o swap.o selection_sort.o insertion_sort.o gnome_sort.o quick_sort.o shell_sort.o merge_sort.o sort

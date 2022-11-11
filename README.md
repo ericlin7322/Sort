@@ -1,6 +1,6 @@
 # Sort
 
-./sort -argument
+`./sort -arg`
 
 * `-b`: bubble sort
 * `-c`: counting sort
